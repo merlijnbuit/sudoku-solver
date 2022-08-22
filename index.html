@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <title>Sudoku Solver</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      tr,
+      td {
+        border: 1px solid black;
+      }
+
+      td {
+        text-align: center;
+        /* padding: 10; */
+        width: 25px;
+        height: 25px;
+        font-weight: bold;
+      }
+
+      .solution {
+        color: forestgreen;
+        font-weight: normal;
+      }
+
+      .pos {
+        font-size: 0.4em;
+        color: grey;
+      }
+      table {
+        display: inline;
+        margin-right: 50px;
+        border-collapse: collapse;
+        font-family: Calibri, sans-serif;
+        font-size: 1.5em;
+      }
+      td {
+        height: 1.4em;
+        width: 1.4em;
+        text-align: center;
+        padding: 0;
+      }
+
+      td:first-child {
+        border-left: 3px solid black;
+      }
+      td:nth-child(3n) {
+        border-right: 3px solid black;
+      }
+
+      tr:first-child {
+        border-top: 3px solid black;
+      }
+      tr:nth-child(3n) td {
+        border-bottom: 3px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Sudoku Solver</h1>
+    <table id="myTable">
+      <tbody></tbody>
+    </table>
+
+    <table id="solutionTable">
+      <tbody></tbody>
+    </table>
+  </body>
+  <script src="sudoku.js"></script>
+</html>
