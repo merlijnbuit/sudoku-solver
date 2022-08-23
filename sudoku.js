@@ -206,7 +206,6 @@ for (let loop = 0; loop < 100; loop++) {
 	//check of getal in rij zit
 	let row = 0;
 	for (let i = 0; i < puzzle.length; i++) {
-		if (50 === i) console.log(puzzle[i]);
 		if (Array.isArray(puzzle[i])) {
 			for (let j = 0; j < 9; j++) {
 				if (puzzle[i] === puzzle[row * 9 + j]) {
@@ -225,8 +224,6 @@ for (let loop = 0; loop < 100; loop++) {
 	//check of getal in kolom zit
 	let column = 0;
 	for (let i = 0; i < puzzle.length; i++) {
-		if (50 === i) console.log(puzzle[i]);
-
 		if (Array.isArray(puzzle[i])) {
 			for (let j = 0; j < 81; j += 9) {
 				if (puzzle[i] === puzzle[column + j]) {
@@ -246,8 +243,6 @@ for (let loop = 0; loop < 100; loop++) {
 	//check of getal in blok zit
 	let blok = [];
 	for (let i = 0; i < puzzle.length; i++) {
-		if (50 === i) console.log(puzzle[i]);
-
 		if (Array.isArray(puzzle[i]) && puzzle[i].length > 1) {
 			for (let j = 0; j < blokken.length; j++) {
 				if (blokken[j].includes(i)) {
@@ -328,6 +323,44 @@ for (let loop = 0; loop < 100; loop++) {
 	//   }
 	// }
 
+	//uitsluiten omdat ergens een getal moet
+	blok = [];
+
+	for (let i = 0; i < puzzle.length; i++) {
+		//als het een cel is met 2 mogelijkheden
+		if (Array.isArray(puzzle[i]) && puzzle[i].length == 2) {
+			for (let j = 0; j < blokken.length; j++) {
+				if (blokken[j].includes(i)) {
+					blok = blokken[j];
+					break;
+				}
+			}
+
+			let amount = 0;
+			//loop over iedere cel in het blok
+			for (let k = 0; k < 9; k++) {
+				if (Array.isArray(puzzle[blok[k]])) {
+					//als de cel dezelfde waardes heeft als i amount omhoog
+					if (puzzle[i].join(',') == puzzle[blok[k]].join(',')) {
+						amount++;
+					}
+				}
+			}
+
+			//als er 2 cellen zijn met dezelfde 2 getallen
+			if (amount == 2) {
+				//loop over alle cellen binnen het blok
+				for (let k = 0; k < 9; k++) {
+					if(Array.isArray(puzzle[blok[k]])) {
+						if (puzzle[i].join(',') != puzzle[blok[k]].join(',')) {
+							//filter de 2 mogelijkheden in de rest van het blok
+							puzzle[blok[k]] = puzzle[blok[k]].filter(x => !puzzle[i].includes(x));
+						}
+					}
+				}
+			}
+		}
+	}
 	console.log(JSON.stringify(puzzle));
 }
 
