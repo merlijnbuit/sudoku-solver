@@ -1,169 +1,170 @@
-let puzzle = [
-	,
-	,
-	,
-	,
-	4,
-	2,
-	,
-	5,
-	,
-	,
-	,
-	4,
-	,
-	,
-	6,
-	,
-	,
-	,
-	5,
-	,
-	8,
-	,
-	,
-	,
-	,
-	,
-	9,
-	1,
-	,
-	6,
-	2,
-	,
-	,
-	,
-	3,
-	,
-	,
-	,
-	5,
-	,
-	,
-	,
-	,
-	,
-	,
-	,
-	,
-	3,
-	6,
-	7,
-	,
-	2,
-	,
-	,
-	,
-	,
-	,
-	,
-	,
-	8,
-	,
-	,
-	,
-	,
-	1,
-	2,
-	,
-	6,
-	4,
-	,
-	,
-	,
-	,
-	,
-	,
-	,
-	,
-	5,
-	7,
-	,
-	,
+let puzzle6 = [
+,
+,
+,
+,
+4,
+2,
+,
+5,
+,
+,
+,
+4,
+,
+,
+6,
+,
+,
+,
+5,
+,
+8,
+,
+,
+,
+,
+,
+9,
+1,
+,
+6,
+2,
+,
+,
+,
+3,
+,
+,
+,
+5,
+,
+,
+,
+,
+,
+,
+,
+,
+3,
+6,
+7,
+,
+2,
+,
+,
+,
+,
+,
+,
+,
+8,
+,
+,
+,
+,
+1,
+2,
+,
+6,
+4,
+,
+,
+,
+,
+,
+,
+,
+,
+5,
+7,
+,
+,
 ];
-// let puzzle = [
-//   ,
-//   ,
-//   7,
-//   ,
-//   8,
-//   ,
-//   ,
-//   ,
-//   2,
-//   5,
-//   ,
-//   ,
-//   ,
-//   1,
-//   ,
-//   ,
-//   3,
-//   ,
-//   ,
-//   ,
-//   1,
-//   ,
-//   ,
-//   3,
-//   6,
-//   ,
-//   7,
-//   ,
-//   ,
-//   ,
-//   1,
-//   ,
-//   ,
-//   ,
-//   8,
-//   4,
-//   ,
-//   ,
-//   ,
-//   ,
-//   ,
-//   ,
-//   ,
-//   ,
-//   ,
-//   7,
-//   8,
-//   ,
-//   ,
-//   ,
-//   2,
-//   ,
-//   ,
-//   ,
-//   6,
-//   ,
-//   8,
-//   4,
-//   ,
-//   ,
-//   2,
-//   ,
-//   ,
-//   ,
-//   9,
-//   ,
-//   ,
-//   2,
-//   ,
-//   ,
-//   ,
-//   8,
-//   2,
-//   ,
-//   ,
-//   ,
-//   9,
-//   ,
-//   5,
-//   ,
-//   ,
-// ];
+
+let puzzle12 = [
+  ,
+  ,
+  7,
+  ,
+  8,
+  ,
+  ,
+  ,
+  2,
+  5,
+  ,
+  ,
+  ,
+  1,
+  ,
+  ,
+  3,
+  ,
+  ,
+  ,
+  1,
+  ,
+  ,
+  3,
+  6,
+  ,
+  7,
+  ,
+  ,
+  ,
+  1,
+  ,
+  ,
+  ,
+  8,
+  4,
+  ,
+  ,
+  ,
+  ,
+  ,
+  ,
+  ,
+  ,
+  ,
+  7,
+  8,
+  ,
+  ,
+  ,
+  2,
+  ,
+  ,
+  ,
+  6,
+  ,
+  8,
+  4,
+  ,
+  ,
+  2,
+  ,
+  ,
+  ,
+  9,
+  ,
+  ,
+  2,
+  ,
+  ,
+  ,
+  8,
+  2,
+  ,
+  ,
+  ,
+  9,
+  ,
+  5,
+  ,
+  ,
+];
 
 let blokken = [
 	[0, 1, 2, 9, 10, 11, 18, 19, 20],
@@ -174,8 +175,34 @@ let blokken = [
 	[33, 34, 35, 42, 43, 44, 51, 52, 53],
 	[54, 55, 56, 63, 64, 65, 72, 73, 74],
 	[57, 58, 59, 66, 67, 68, 75, 76, 77],
-	[60, 61, 62, 69, 70, 71, 78, 79, 80],
+	[60, 61, 62, 69, 70, 71, 78, 79, 80]
 ];
+
+let rijen = [
+	[0, 1, 2, 3, 4, 5, 6, 7, 8],
+	[9, 10, 11, 12, 13, 14, 15, 16, 17],
+	[18, 19, 20, 21, 22, 23, 24, 25, 26],
+	[27, 28, 29, 30, 31, 32, 33, 34, 35],
+	[36, 37, 38, 39, 40, 41, 42, 43, 44],
+	[45, 46, 47, 48, 49, 50, 51, 52, 53],
+	[54, 55, 56, 57, 58, 59, 60, 61, 62],
+	[65, 64, 65, 66, 67, 68, 69, 70, 71],
+	[72, 73, 74, 75, 76, 77, 78, 79, 80]
+];
+
+let kolommen = [
+	[0, 9, 18, 27, 36, 45, 54, 63, 72],
+	[1, 10, 19, 28, 37, 46, 55, 64, 73],
+	[2, 11, 20, 29, 38, 47, 56, 65, 74],
+	[3, 12, 21, 30, 39, 48, 57, 66, 75],
+	[4, 13, 22, 31, 40, 49, 58, 67, 76],
+	[5, 14, 23, 32, 41, 50, 59, 68, 77],
+	[6, 15, 24, 33, 42, 51, 60, 69, 78],
+	[7, 16, 25, 34, 43, 52, 61, 70, 79],
+	[8, 17, 26, 35, 44, 53, 62, 71, 80],
+];
+
+let puzzle = puzzle12;
 
 for (let i = 0; i < puzzle.length; i++) {
 	if (puzzle[i] === undefined) {
@@ -260,10 +287,85 @@ for (let loop = 0; loop < 100; loop++) {
 			}
 		}
 	}
-
+	//check of ene mogelijkheid in rij is
+	let rij = [];
+	for (let i = 0; i < puzzle.length; i++) {
+		if (Array.isArray(puzzle[i]) && puzzle[i].length > 1) {
+			for (let j = 0; j < rijen.length; j++) {
+				if (rijen[j].includes(i)) {
+					rij = rijen[j];
+					break;
+				}
+			}
+			// loop over elke mogelijkheid in de cell i
+			let newArray = [];
+			for (let j = 0; j < puzzle[i].length; j++) {
+				if (puzzle[i].length === 1) {
+					continue;
+				}
+				// loop over iedere cel in een blok
+				let found = false;
+				for (let k = 0; k < 9; k++) {
+					if (rij[k] === i) {
+						continue;
+					}
+					if (Array.isArray(puzzle[rij[k]])) {
+						if (puzzle[rij[k]].includes(puzzle[i][j])) {
+							found = true;
+							break;
+						}
+					}
+				}
+				if (found === false) {
+					newArray.push(puzzle[i][j]);
+				}
+			}
+			if (newArray.length > 0) {
+				puzzle[i] = newArray;
+			}
+		}
+	}
+	
+	//check of ene mogelijkheid in kolom is
+	let kolom = [];
+	for (let i = 0; i < puzzle.length; i++) {
+		if (Array.isArray(puzzle[i]) && puzzle[i].length > 1) {
+			for (let j = 0; j < kolommen.length; j++) {
+				if (kolommen[j].includes(i)) {
+					kolom = kolommen[j];
+					break;
+				}
+			}
+			// loop over elke mogelijkheid in de cell i
+			let newArray = [];
+			for (let j = 0; j < puzzle[i].length; j++) {
+				if (puzzle[i].length === 1) {
+					continue;
+				}
+				// loop over iedere cel in een blok
+				let found = false;
+				for (let k = 0; k < 9; k++) {
+					if (kolom[k] === i) {
+						continue;
+					}
+					if (Array.isArray(puzzle[kolom[k]])) {
+						if (puzzle[kolom[k]].includes(puzzle[i][j])) {
+							found = true;
+							break;
+						}
+					}
+				}
+				if (found === false) {
+					newArray.push(puzzle[i][j]);
+				}
+			}
+			if (newArray.length > 0) {
+				puzzle[i] = newArray;
+			}
+		}
+	}
 	//check of ene mogelijkheid in blokje is
 	blok = [];
-
 	for (let i = 0; i < puzzle.length; i++) {
 		if (Array.isArray(puzzle[i]) && puzzle[i].length > 1) {
 			for (let j = 0; j < blokken.length; j++) {
@@ -305,27 +407,26 @@ for (let loop = 0; loop < 100; loop++) {
 	//kijken of getallen in dezelfde rij zitten
 	//getal in de rest van de rij uitsluiten
 	//check of getal in rij moet
-	// blok = [];
-	// for (let i = 0; i < puzzle.length; i++) {
-	//   if (Array.isArray(puzzle[i]) && puzzle[i].length > 1) {
-	//     for (let j = 0; j < blokjes.length; j++) {
-	//       if (blokjes[j].includes(i)) {
-	//         blok = blokjes[j];
-	//         break;
-	//       }
-	//     }
+	/*blok = [];
+	for (let i = 0; i < puzzle.length; i++) {
+		if (Array.isArray(puzzle[i]) && puzzle[i].length > 1) {
+			for (let j = 0; j < blokjes.length; j++) {
+				if (blokjes[j].includes(i)) {
+					blok = blokjes[j];
+					break;
+				}
+			}
+		
+			for (let j = 0; j < blok.length; j++) {
+				for (let k = 0; k < blok[j].length; k++) {
 
-	//     for (let j = 0; j < blok.length; j++) {
-	//       for (let k = 0; k < blok[j].length; k++) {
+				}
+			}
+		}
+	}*/
 
-	//       }
-	//     }
-	//   }
-	// }
-
-	//uitsluiten omdat ergens een getal moet
+	//uitsluiten omdat ergens een getal in blok moet
 	blok = [];
-
 	for (let i = 0; i < puzzle.length; i++) {
 		//als het een cel is met 2 mogelijkheden
 		if (Array.isArray(puzzle[i]) && puzzle[i].length == 2) {
